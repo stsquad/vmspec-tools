@@ -1,0 +1,12 @@
+sudo: false
+dist: trusty
+language: python
+script:
+  - ${RUN}
+addons:
+  apt:
+    packages:
+      - qemu-system-arm
+env:
+    - RUN="./vmspec-boot -s"
+    - RUN="./vmspec-boot -s --no-3"
